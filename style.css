@@ -1,0 +1,9 @@
+:root {
+    --main-color: #99E2D0; /* var(--main-color) */
+    --second-color: #008766; /* var(--second-color) */
+    --light-blue-color: #89C8FA; /* var(--light-blue-color) */
+    --dark-blue-color: #003A68; /* var(--dark-blue-color) */
+    --purple-color: #9356DC; /* var(--purple-color) */
+    --white-color: #003A68; /* var(--white-color) */
+    --black-color: #000000; /* var(--black-color) */
+}
