@@ -85,7 +85,7 @@ header img {
   height: auto;
   gap: 25px;
 }
-.steps .steps_button {
+.steps .steps_button, .steps .steps_button2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,7 +96,7 @@ header img {
   box-shadow: 0.9px 4.6px 25px rgba(0, 0, 0, 0.17), 7px 37px 200px rgba(0, 0, 0, 0.085);
   border: none;
 }
-.steps .steps_button:hover {
+.steps .steps_button2 {
   background-color: #F5EDFF;
 }
 .steps .number {
