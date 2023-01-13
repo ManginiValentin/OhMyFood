@@ -1,9 +1,204 @@
-:root {
-    --main-color: #99E2D0; /* var(--main-color) */
-    --second-color: #008766; /* var(--second-color) */
-    --light-blue-color: #89C8FA; /* var(--light-blue-color) */
-    --dark-blue-color: #003A68; /* var(--dark-blue-color) */
-    --purple-color: #9356DC; /* var(--purple-color) */
-    --white-color: #003A68; /* var(--white-color) */
-    --black-color: #000000; /* var(--black-color) */
+body {
+  font-family: "Roboto", sans-serif;
+  max-width: 726px;
+  font-weight: 500;
+  font-size: 16px;
 }
+
+h1, h2 {
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+}
+
+p {
+  font-weight: 300;
+  font-size: 18px;
+  width: auto;
+}
+
+header {
+  width: auto;
+  height: 43px;
+  margin: 10px 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header img {
+  width: 162px;
+  height: 44px;
+}
+
+.location_bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: auto;
+  color: black;
+  background-color: #EAEAEA;
+}
+.location_bar .fa-solid.fa-location-dot {
+  height: 16px;
+  padding-right: 17px;
+}
+
+.reservation {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 39px 0 57px;
+  background: #F7F7F7;
+}
+.reservation__title {
+  padding-bottom: 5px;
+}
+.reservation__title2 {
+  padding-bottom: 25px;
+}
+.reservation__button {
+  font-weight: 500;
+  size: 16px;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  color: white;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  border: none;
+}
+
+.steps {
+  padding: 45px 20px;
+}
+.steps__title {
+  padding-bottom: 25px;
+}
+.steps .button_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  gap: 25px;
+}
+.steps .steps_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 73px;
+  width: 100%;
+  border-radius: 25px;
+  background-color: #F7F7F7;
+  box-shadow: 0.9px 4.6px 25px rgba(0, 0, 0, 0.17), 7px 37px 200px rgba(0, 0, 0, 0.085);
+  border: none;
+}
+.steps .steps_button:hover {
+  background-color: #F5EDFF;
+}
+.steps .number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 10px;
+  height: 24px;
+  width: 24px;
+  color: white;
+  border: 1px solid #9356DC;
+  background: #9356DC;
+  border-radius: 100%;
+}
+.steps i {
+  padding-right: 27px;
+  font-size: 20px;
+}
+
+.restaurants {
+  padding: 54px 20px;
+  background-color: #F7F7F7;
+}
+.restaurants__title {
+  padding-bottom: 20px;
+}
+.restaurants__cards_list {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  gap: 50px;
+}
+.restaurants .new {
+  position: absolute;
+  right: 30px;
+  margin: 10px;
+  padding: 9px 7px;
+  color: #008766;
+  border: 1px solid #99e2d0;
+  border-radius: 2px;
+  background-color: #99e2d0;
+}
+.restaurants .card {
+  height: 250px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0.9px 4.6px 25px rgba(0, 0, 0, 0.17), 7px 37px 200px rgba(0, 0, 0, 0.085);
+  border-radius: 25px;
+}
+.restaurants img {
+  width: 100%;
+  height: 170px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+.restaurants h3 {
+  padding: 15px 0 5px 13px;
+}
+.restaurants p {
+  padding-left: 13px;
+}
+.restaurants i {
+  font-size: 21px;
+  position: absolute;
+  right: 45px;
+  padding-top: 23px;
+  overflow: hidden;
+}
+
+footer {
+  background-color: #353535;
+  padding-top: 25px;
+  padding-bottom: 35px;
+}
+footer .title {
+  color: white;
+  padding-left: 25px;
+  font-family: "Shrikhand";
+  font-size: 18px;
+}
+footer ul {
+  list-style-type: none;
+  padding-left: 25px;
+}
+footer li {
+  padding-bottom: 7px;
+}
+footer .liens, footer .liens_2 {
+  text-decoration: none;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+footer .liens_2 {
+  font-weight: 400;
+}
+footer i {
+  padding-right: 10px;
+  font-size: 13px;
+}
+footer .fa-solid.fa-handshake-angle {
+  padding-right: 5px;
+}/*# sourceMappingURL=style.css.map */
