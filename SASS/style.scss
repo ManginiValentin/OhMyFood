@@ -1,0 +1,223 @@
+$primary:#9356DC;
+$secondary: #008766;
+$tertiary: #99e2d0;
+$gradient: #FF79DA;
+$black:black;
+$white:white;
+$dark_color: #EAEAEA;
+$darker_color: #353535;
+$light_color: #F7F7F7;
+$hover: #F5EDFF;
+
+$font-family: 'Roboto', sans-serif;
+
+@mixin flex_xy_alignment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex_column{
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex_wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+body{
+    font-family: $font-family;
+    max-width: 726px;
+    font-weight: 500;
+    font-size: 16px;
+}
+h1{
+   font-weight: 700;
+   font-family: $font-family;
+   font-size: 24px;
+}
+h2{
+    @extend h1;
+}
+p{
+    font-weight: 300;
+    font-size: 18px;
+    width: auto;
+}
+header{
+    width: auto;
+    height: 43px;
+    margin: 10px 0 10px;
+    @include flex_xy_alignment;
+
+    img{
+    width: 162px;
+    height: 44px;
+    }
+}
+.location_bar{
+    @include flex_xy_alignment;
+    height: 50px;
+    width: auto;
+    color: $black;
+    background-color: $dark_color;
+
+    .fa-solid.fa-location-dot{
+        height: 16px;
+        padding-right: 17px;
+    }
+}
+.reservation{
+    @include flex_column;
+    @include flex_xy_alignment;
+    padding: 39px 0 57px;
+    background: $light_color;
+
+        &__title{
+            padding-bottom: 5px
+        }
+
+        &__title2{
+            padding-bottom: 25px;
+        }
+        &__button{
+            font-weight: 500;
+            size: 16px;
+            width: 218px;
+            height: 50px;
+            border-radius: 25px;
+            color: $white;
+            background-image: linear-gradient($primary,$gradient);
+            border: none;
+        }
+}
+.steps{
+    padding: 45px 20px;
+
+    &__title{
+        padding-bottom: 25px;
+    }
+
+    .button_list{
+        @include flex_xy_alignment;
+        @include flex_column;
+        height: auto;
+        gap: 25px;
+    }
+    .steps_button{
+        @include flex_xy_alignment;
+        height: 73px;
+        width: 100%;
+        border-radius: 25px;
+        background-color: $light_color;
+        box-shadow: 0.9px 4.6px 25px rgba(0, 0, 0, 0.17), 7px 37px 200px rgba(0, 0, 0, 0.085);
+        border: none;
+    }
+    .steps_button2{
+        @extend .steps_button;
+        background-color: $hover;
+    }
+
+    .number{
+        @include flex_xy_alignment;
+        position: absolute;
+        left: 10px;
+        height: 24px;
+        width: 24px;
+        color: $white;
+        border: 1px solid $primary;
+        background: $primary;
+        border-radius: 100%;
+    }
+    i {
+        padding-right: 27px;
+        font-size: 20px;
+    }
+}
+.restaurants {
+    padding: 54px 20px;
+    background-color: $light_color;
+
+        &__title{
+            padding-bottom: 20px;
+        }
+
+        &__cards_list{
+            @include flex_column;
+            height: auto;
+            gap: 50px;
+        }
+        .new{
+            position: absolute;
+            right: 30px;
+            margin:10px;
+            padding: 9px 7px;
+            color: $secondary;
+            border: 1px solid $tertiary;
+            border-radius: 2px;
+            background-color: $tertiary;
+        }
+        .card{
+            height: 250px;
+            width: 100%;
+            background-color: $white;
+            box-shadow: 0.9px 4.6px 25px rgba(0, 0, 0, 0.17), 7px 37px 200px rgba(0, 0, 0, 0.085);
+            border-radius: 25px;
+        }
+        img{
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 25px 25px 0 0;
+        }
+        h3{
+            padding: 15px 0 5px 13px;
+        }
+
+        p{
+            padding-left: 13px;
+        }
+        i{
+            font-size: 21px;
+            position: absolute;
+            right: 45px;
+            padding-top: 23px;
+            overflow: hidden;
+        }
+}
+
+footer{
+    background-color: $darker_color;
+    padding-top: 25px;
+    padding-bottom: 35px;
+
+        .title{
+            color: $white;
+            padding-left: 25px;
+            font-family: 'Shrikhand';
+            font-size: 18px;
+        }
+        ul{
+            list-style-type: none;
+            padding-left: 25px;
+        }
+        li{
+            padding-bottom:7px;
+        }
+        .liens{
+            text-decoration: none;
+            color: $white;
+            font-family: $font-family;
+            font-weight: 500;
+        }
+        .liens_2{
+            @extend .liens;
+            font-weight: 400;
+        }
+        i{
+            padding-right: 10px;
+            font-size: 13px;;
+        }
+        .fa-solid.fa-handshake-angle{
+            padding-right: 5px;
+        }
+}
