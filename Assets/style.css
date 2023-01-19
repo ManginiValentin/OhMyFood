@@ -17,6 +17,48 @@ p {
   width: auto;
 }
 
+.loader {
+  font-size: 50px;
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: black;
+  background: #F5EDFF;
+  opacity: 0.9;
+  z-index: 1;
+  width: 100vw;
+  -webkit-animation: disappear 1s 3s forwards;
+          animation: disappear 1s 3s forwards;
+}
+.loader i {
+  -webkit-animation: spin 3s infinite linear;
+          animation: spin 3s infinite linear;
+}
+
+@-webkit-keyframes disappear {
+  to {
+    opacity: 0;
+    z-index: -3;
+  }
+}
+
+@keyframes disappear {
+  to {
+    opacity: 0;
+    z-index: -3;
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 header {
   width: auto;
   height: 43px;
@@ -52,6 +94,7 @@ header img {
   align-items: center;
   padding: 39px 0 57px;
   background: #F7F7F7;
+  text-align: center;
 }
 .reservation__title {
   padding-bottom: 5px;
@@ -68,6 +111,13 @@ header img {
   color: white;
   background-image: linear-gradient(#9356DC, #FF79DA);
   border: none;
+  cursor: pointer;
+  box-shadow: 0.9px 4.6px 25px rgba(0, 0, 0, 0.17), 7px 37px 200px rgba(0, 0, 0, 0.085);
+  transition: all 1s ease-out;
+}
+.reservation__button:hover {
+  background-image: linear-gradient(#a16be0, #ff93e1);
+  box-shadow: 0.9px 0.9px 13.3px rgba(0, 0, 0, 0.52), 7px 7px 106px rgba(0, 0, 0, 0.26);
 }
 
 .steps {
@@ -84,6 +134,7 @@ header img {
   flex-direction: column;
   height: auto;
   gap: 25px;
+  position: relative;
 }
 .steps .steps_button, .steps .steps_button2 {
   display: flex;
@@ -95,16 +146,27 @@ header img {
   background-color: #F7F7F7;
   box-shadow: 0.9px 4.6px 25px rgba(0, 0, 0, 0.17), 7px 37px 200px rgba(0, 0, 0, 0.085);
   border: none;
+  cursor: pointer;
+  transition: all 1s ease-out;
+}
+.steps .steps_button:hover, .steps .steps_button2:hover {
+  background-color: #fafafa;
+  box-shadow: 0.9px 0.9px 13.3px rgba(0, 0, 0, 0.52), 7px 7px 106px rgba(0, 0, 0, 0.26);
 }
 .steps .steps_button2 {
   background-color: #F5EDFF;
+  transition: all 1s ease-out;
+}
+.steps .steps_button2:hover {
+  background-color: #f8f2ff;
+  box-shadow: 0.9px 0.9px 13.3px rgba(0, 0, 0, 0.52), 7px 7px 106px rgba(0, 0, 0, 0.26);
 }
 .steps .number {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: 10px;
+  left: -10px;
   height: 24px;
   width: 24px;
   color: white;
@@ -132,7 +194,7 @@ header img {
 }
 .restaurants .new {
   position: absolute;
-  right: 30px;
+  right: 20px;
   margin: 10px;
   padding: 9px 7px;
   color: #008766;
@@ -146,6 +208,7 @@ header img {
   background-color: white;
   box-shadow: 0.9px 4.6px 25px rgba(0, 0, 0, 0.17), 7px 37px 200px rgba(0, 0, 0, 0.085);
   border-radius: 25px;
+  position: relative;
 }
 .restaurants img {
   width: 100%;
@@ -154,15 +217,32 @@ header img {
      object-fit: cover;
   border-radius: 25px 25px 0 0;
 }
+.restaurants i {
+  width: 23px;
+  height: 23px;
+}
+.restaurants .heart_plain {
+  cursor: pointer;
+  opacity: 0;
+  color: transparent;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: opacity 1s ease-out 200ms;
+}
+.restaurants .heart_plain:hover {
+  opacity: 1;
+}
 .restaurants h3 {
   padding: 15px 0 5px 13px;
 }
 .restaurants p {
   padding-left: 13px;
 }
-.restaurants i {
+.restaurants a {
   font-size: 21px;
   position: absolute;
+  background-size: contain;
   right: 45px;
   padding-top: 23px;
   overflow: hidden;
