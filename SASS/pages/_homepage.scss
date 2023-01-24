@@ -1,0 +1,160 @@
+.location_bar{
+    @include flex_xy_alignment;
+    height: 50px;
+    width: auto;
+    color: $black;
+    background-color: $dark_color;
+
+    .fa-solid.fa-location-dot{
+        height: 16px;
+        padding-right: 17px;
+    }
+}
+.reservation{
+    @include flex_column;
+    @include flex_xy_alignment;
+    padding: 39px 20px 57px;
+    background: $light_color;
+    text-align: center;
+
+        &__title{
+            padding-bottom: 5px
+        }
+
+        &__title2{
+            padding-bottom: 25px;
+        }
+}
+.steps{
+    padding: 45px 20px;
+
+    &__title{
+        padding-bottom: 25px;
+        @media (min-width: 768px){
+            padding-left: 150px;
+        }
+    }
+
+    .button_list{
+        @include flex_xy_alignment;
+        @include flex_column;
+        height: auto;
+        gap: 25px;
+        @media (min-width: 768px){
+            padding-left: 90px;
+            padding-right: 90px;
+            @include flex_direction;
+        }
+        @media (min-width: 992px){
+            padding-right: 150px;
+            padding-left: 150px;
+        }
+    }
+
+    .number{
+        @include flex_xy_alignment;
+        position: absolute;
+        left: -10px;
+        height: 24px;
+        width: 24px;
+        color: $white;
+        border: 1px solid $primary;
+        background: $primary;
+        border-radius: 100%;
+    }
+    i {
+        padding-right: 27px;
+        font-size: 20px;
+    }
+}
+.restaurants {
+    padding: 54px 20px;
+    background-color: $light_color;
+    @media (min-width: 768px){
+        padding-right: 90px;
+        padding-left: 90px;
+    }
+    @media (min-width: 992px){
+        padding-right: 150px;
+        padding-left: 150px;
+    }
+
+        &__title{
+            padding-bottom: 20px;
+        }
+
+        &__cards_list{
+            @include flex_column;
+            height: auto;
+            gap: 50px;
+            @media (min-width: 768px){
+                @include flex_direction;
+                gap: 20px;
+            }
+        }
+        .new{
+            position: absolute;
+            right: 20px;
+            margin:10px;
+            padding: 9px 7px;
+            color: $secondary;
+            border: 1px solid $tertiary;
+            border-radius: 2px;
+            background-color: $tertiary;
+            @media (min-width: 768px){
+                right: 10px;
+            }
+        }
+        .card{
+            height: 250px;
+            width: 100%;
+            background-color: $white;
+            box-shadow: 0.9px 4.6px 25px rgba(0, 0, 0, 0.17), 7px 37px 200px rgba(0, 0, 0, 0.085);
+            border-radius: 25px;
+            position: relative;
+        }
+        img{
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 25px 25px 0 0;
+        }
+        i {
+            width:23px;
+            height: 23px;
+        }
+        .heart_plain{
+            cursor: pointer;
+            opacity: 0;
+            color:transparent;
+            background-image: linear-gradient($primary,$gradient);
+            background-clip: text;
+            -webkit-background-clip: text;
+            transition: opacity 1s ease-out 200ms;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+        h3{
+            padding: 15px 0 5px 13px;
+            @media (min-width: 768px){
+            padding-top: 7px;
+            padding-bottom: 7px;
+            }
+        }
+        p{
+            padding-left: 13px;
+        }
+        a{
+            font-size: 21px;
+            position: absolute;
+            background-size: contain;
+            right: 45px;
+            padding-top: 23px;
+            overflow: hidden;
+            @media (min-width: 768px){
+                right: 10px;
+            }
+        }
+}

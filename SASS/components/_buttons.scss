@@ -1,0 +1,44 @@
+.reservation__button{
+    font-weight: 500;
+    size: 16px;
+    width: 218px;
+    height: 50px;
+    border-radius: 25px;
+    color: $white;
+    background-image: linear-gradient($primary,$gradient);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0.9px 4.6px 25px rgba(0, 0, 0, 0.17), 7px 37px 200px rgba(0, 0, 0, 0.085);
+    transition: all 1s ease-out;
+    &:hover{
+        background-image: linear-gradient(lighten($primary, 5), lighten($gradient, 5));
+        box-shadow: 0.9px 0.9px 13.3px rgba(0, 0, 0, 0.52),7px 7px 106px rgba(0, 0, 0, 0.26);
+    }
+}
+
+.steps__button{
+    @include flex_xy_alignment;
+    position: relative;
+    height: 73px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: $light_color;
+    box-shadow: 0.9px 4.6px 25px rgba(0, 0, 0, 0.17), 7px 37px 200px rgba(0, 0, 0, 0.085);
+    border: none;
+    cursor: pointer;
+    transition: all 1s ease-out;
+    &:hover{
+    background-color: lighten($light_color, 1);
+    box-shadow:0.9px 0.9px 13.3px rgba(0, 0, 0, 0.52),7px 7px 106px rgba(0, 0, 0, 0.26);
+    }
+}
+.steps__button2{
+    @extend .steps__button;
+    background-color: $hover;
+    transition: all 1s ease-out;
+    &:hover{
+        background-color: lighten($hover, 1);
+        box-shadow:0.9px 0.9px 13.3px rgba(0, 0, 0, 0.52),7px 7px 106px rgba(0, 0, 0, 0.26);
+        }
+    }

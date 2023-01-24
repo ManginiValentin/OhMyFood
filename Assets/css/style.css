@@ -22,25 +22,6 @@ p {
   width: auto;
 }
 
-.loader {
-  font-size: 50px;
-  position: fixed;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  color: black;
-  background: #F5EDFF;
-  opacity: 0.9;
-  z-index: 1;
-  width: 100vw;
-  -webkit-animation: disappear 1s 3s forwards;
-          animation: disappear 1s 3s forwards;
-}
-.loader i {
-  -webkit-animation: spin 3s infinite linear;
-          animation: spin 3s infinite linear;
-}
-
 @-webkit-keyframes disappear {
   to {
     opacity: 0;
@@ -64,6 +45,72 @@ p {
     transform: rotate(360deg);
   }
 }
+.reservation__button {
+  font-weight: 500;
+  size: 16px;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  color: white;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0.9px 4.6px 25px rgba(0, 0, 0, 0.17), 7px 37px 200px rgba(0, 0, 0, 0.085);
+  transition: all 1s ease-out;
+}
+.reservation__button:hover {
+  background-image: linear-gradient(#a16be0, #ff93e1);
+  box-shadow: 0.9px 0.9px 13.3px rgba(0, 0, 0, 0.52), 7px 7px 106px rgba(0, 0, 0, 0.26);
+}
+
+.steps__button, .steps__button2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 73px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 25px;
+  background-color: #F7F7F7;
+  box-shadow: 0.9px 4.6px 25px rgba(0, 0, 0, 0.17), 7px 37px 200px rgba(0, 0, 0, 0.085);
+  border: none;
+  cursor: pointer;
+  transition: all 1s ease-out;
+}
+.steps__button:hover, .steps__button2:hover {
+  background-color: #fafafa;
+  box-shadow: 0.9px 0.9px 13.3px rgba(0, 0, 0, 0.52), 7px 7px 106px rgba(0, 0, 0, 0.26);
+}
+
+.steps__button2 {
+  background-color: #F5EDFF;
+  transition: all 1s ease-out;
+}
+.steps__button2:hover {
+  background-color: #f8f2ff;
+  box-shadow: 0.9px 0.9px 13.3px rgba(0, 0, 0, 0.52), 7px 7px 106px rgba(0, 0, 0, 0.26);
+}
+
+.loader {
+  font-size: 50px;
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: black;
+  background: #F5EDFF;
+  opacity: 0.9;
+  z-index: 1;
+  width: 100vw;
+  -webkit-animation: disappear 1s 3s forwards;
+          animation: disappear 1s 3s forwards;
+}
+.loader i {
+  -webkit-animation: spin 3s infinite linear;
+          animation: spin 3s infinite linear;
+}
+
 header {
   width: auto;
   height: 43px;
@@ -75,6 +122,78 @@ header {
 header img {
   width: 162px;
   height: 44px;
+}
+
+footer {
+  background-color: #353535;
+  padding-top: 25px;
+  padding-bottom: 35px;
+}
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-right: 90px;
+    padding-left: 90px;
+  }
+}
+@media (min-width: 992px) {
+  footer {
+    padding-right: 150px;
+    padding-left: 150px;
+  }
+}
+footer .title {
+  color: white;
+  padding-left: 25px;
+  font-family: "Shrikhand";
+  font-size: 18px;
+}
+@media (min-width: 768px) {
+  footer .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+footer ul {
+  list-style-type: none;
+  padding-left: 25px;
+}
+@media (min-width: 768px) {
+  footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+footer li {
+  padding-bottom: 7px;
+}
+@media (min-width: 768px) {
+  footer li {
+    padding: 0 20px;
+  }
+}
+footer .liens, footer .liens_2 {
+  text-decoration: none;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+footer .liens_2 {
+  font-weight: 400;
+}
+footer i {
+  padding-right: 10px;
+  font-size: 13px;
+}
+footer .fa-solid.fa-handshake-angle {
+  padding-right: 5px;
 }
 
 .location_bar {
@@ -106,23 +225,6 @@ header img {
 }
 .reservation__title2 {
   padding-bottom: 25px;
-}
-.reservation__button {
-  font-weight: 500;
-  size: 16px;
-  width: 218px;
-  height: 50px;
-  border-radius: 25px;
-  color: white;
-  background-image: linear-gradient(#9356DC, #FF79DA);
-  border: none;
-  cursor: pointer;
-  box-shadow: 0.9px 4.6px 25px rgba(0, 0, 0, 0.17), 7px 37px 200px rgba(0, 0, 0, 0.085);
-  transition: all 1s ease-out;
-}
-.reservation__button:hover {
-  background-image: linear-gradient(#a16be0, #ff93e1);
-  box-shadow: 0.9px 0.9px 13.3px rgba(0, 0, 0, 0.52), 7px 7px 106px rgba(0, 0, 0, 0.26);
 }
 
 .steps {
@@ -158,33 +260,6 @@ header img {
     padding-right: 150px;
     padding-left: 150px;
   }
-}
-.steps .steps_button, .steps .steps_button2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 73px;
-  width: 100%;
-  padding: 20px;
-  border-radius: 25px;
-  background-color: #F7F7F7;
-  box-shadow: 0.9px 4.6px 25px rgba(0, 0, 0, 0.17), 7px 37px 200px rgba(0, 0, 0, 0.085);
-  border: none;
-  cursor: pointer;
-  transition: all 1s ease-out;
-}
-.steps .steps_button:hover, .steps .steps_button2:hover {
-  background-color: #fafafa;
-  box-shadow: 0.9px 0.9px 13.3px rgba(0, 0, 0, 0.52), 7px 7px 106px rgba(0, 0, 0, 0.26);
-}
-.steps .steps_button2 {
-  background-color: #F5EDFF;
-  transition: all 1s ease-out;
-}
-.steps .steps_button2:hover {
-  background-color: #f8f2ff;
-  box-shadow: 0.9px 0.9px 13.3px rgba(0, 0, 0, 0.52), 7px 7px 106px rgba(0, 0, 0, 0.26);
 }
 .steps .number {
   display: flex;
@@ -307,75 +382,3 @@ header img {
     right: 10px;
   }
 }
-
-footer {
-  background-color: #353535;
-  padding-top: 25px;
-  padding-bottom: 35px;
-}
-@media (min-width: 768px) {
-  footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row-reverse;
-    padding-right: 90px;
-    padding-left: 90px;
-  }
-}
-@media (min-width: 992px) {
-  footer {
-    padding-right: 150px;
-    padding-left: 150px;
-  }
-}
-footer .title {
-  color: white;
-  padding-left: 25px;
-  font-family: "Shrikhand";
-  font-size: 18px;
-}
-@media (min-width: 768px) {
-  footer .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-footer ul {
-  list-style-type: none;
-  padding-left: 25px;
-}
-@media (min-width: 768px) {
-  footer ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: row-reverse;
-  }
-}
-footer li {
-  padding-bottom: 7px;
-}
-@media (min-width: 768px) {
-  footer li {
-    padding: 0 20px;
-  }
-}
-footer .liens, footer .liens_2 {
-  text-decoration: none;
-  color: white;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-}
-footer .liens_2 {
-  font-weight: 400;
-}
-footer i {
-  padding-right: 10px;
-  font-size: 13px;
-}
-footer .fa-solid.fa-handshake-angle {
-  padding-right: 5px;
-}/*# sourceMappingURL=style.css.map */

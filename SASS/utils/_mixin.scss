@@ -1,0 +1,17 @@
+@mixin flex_xy_alignment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex_column{
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex_wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+@mixin flex_direction{
+    display: flex;
+    flex-direction: row;
+}
