@@ -4,6 +4,11 @@ body {
   font-weight: 500;
   font-size: 16px;
 }
+@media (min-width: 768px) {
+  body {
+    max-width: 100vw;
+  }
+}
 
 h1, h2 {
   font-weight: 700;
@@ -92,7 +97,7 @@ header img {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 39px 0 57px;
+  padding: 39px 20px 57px;
   background: #F7F7F7;
   text-align: center;
 }
@@ -126,6 +131,11 @@ header img {
 .steps__title {
   padding-bottom: 25px;
 }
+@media (min-width: 768px) {
+  .steps__title {
+    padding-left: 150px;
+  }
+}
 .steps .button_list {
   display: flex;
   justify-content: center;
@@ -134,14 +144,29 @@ header img {
   flex-direction: column;
   height: auto;
   gap: 25px;
-  position: relative;
+}
+@media (min-width: 768px) {
+  .steps .button_list {
+    padding-left: 90px;
+    padding-right: 90px;
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (min-width: 992px) {
+  .steps .button_list {
+    padding-right: 150px;
+    padding-left: 150px;
+  }
 }
 .steps .steps_button, .steps .steps_button2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   height: 73px;
   width: 100%;
+  padding: 20px;
   border-radius: 25px;
   background-color: #F7F7F7;
   box-shadow: 0.9px 4.6px 25px rgba(0, 0, 0, 0.17), 7px 37px 200px rgba(0, 0, 0, 0.085);
@@ -183,6 +208,18 @@ header img {
   padding: 54px 20px;
   background-color: #F7F7F7;
 }
+@media (min-width: 768px) {
+  .restaurants {
+    padding-right: 90px;
+    padding-left: 90px;
+  }
+}
+@media (min-width: 992px) {
+  .restaurants {
+    padding-right: 150px;
+    padding-left: 150px;
+  }
+}
 .restaurants__title {
   padding-bottom: 20px;
 }
@@ -191,6 +228,13 @@ header img {
   flex-direction: column;
   height: auto;
   gap: 50px;
+}
+@media (min-width: 768px) {
+  .restaurants__cards_list {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
 }
 .restaurants .new {
   position: absolute;
@@ -201,6 +245,11 @@ header img {
   border: 1px solid #99e2d0;
   border-radius: 2px;
   background-color: #99e2d0;
+}
+@media (min-width: 768px) {
+  .restaurants .new {
+    right: 10px;
+  }
 }
 .restaurants .card {
   height: 250px;
@@ -236,6 +285,12 @@ header img {
 .restaurants h3 {
   padding: 15px 0 5px 13px;
 }
+@media (min-width: 768px) {
+  .restaurants h3 {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+}
 .restaurants p {
   padding-left: 13px;
 }
@@ -247,11 +302,32 @@ header img {
   padding-top: 23px;
   overflow: hidden;
 }
+@media (min-width: 768px) {
+  .restaurants a {
+    right: 10px;
+  }
+}
 
 footer {
   background-color: #353535;
   padding-top: 25px;
   padding-bottom: 35px;
+}
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-right: 90px;
+    padding-left: 90px;
+  }
+}
+@media (min-width: 992px) {
+  footer {
+    padding-right: 150px;
+    padding-left: 150px;
+  }
 }
 footer .title {
   color: white;
@@ -259,12 +335,33 @@ footer .title {
   font-family: "Shrikhand";
   font-size: 18px;
 }
+@media (min-width: 768px) {
+  footer .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 footer ul {
   list-style-type: none;
   padding-left: 25px;
 }
+@media (min-width: 768px) {
+  footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
 footer li {
   padding-bottom: 7px;
+}
+@media (min-width: 768px) {
+  footer li {
+    padding: 0 20px;
+  }
 }
 footer .liens, footer .liens_2 {
   text-decoration: none;
