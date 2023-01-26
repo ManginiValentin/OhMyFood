@@ -1,0 +1,145 @@
+main{
+    @media (min-width: 768px){
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+
+    img{
+        width: 100%;
+        @media (min-width: 768px){
+            width: 100vw;
+            height: 400px;
+            object-fit: cover;
+        }
+    }
+}
+.container {
+    background-color: $light_color;
+}
+
+.top_title{
+    position: relative;
+    top: -60px;
+    border: 1px solid $light_color;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: $light_color;
+    @media (min-width: 768px){
+        width: 70vw;
+    }
+}
+.restaurant_name{
+    font-family: $logo-font;
+    padding: 32px 17px 1px 17px;
+}
+.plain_heart{
+    font-size: 21px;
+    position: absolute;
+    background-size: contain;
+    right: 45px;
+    padding-top: 5px;
+    overflow: hidden;
+}
+.empty_heart{
+    @extend .plain_heart;
+}
+.alignement{
+    display: flex;
+    justify-content: center;
+}
+i {
+    width:23px;
+    height: 23px;
+}
+.empty_heart{
+    color: $black;
+}
+.heart_plain{
+    cursor: pointer;
+    opacity: 0;
+    color:transparent;
+    background-image: linear-gradient($primary,$gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: opacity 1s ease-out 200ms;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+.food_list{
+    background: $light_color;
+    position: relative;
+    top:-60px;
+    font-family: $font-family;
+    padding: 0 15px;
+
+    &__title{
+        font-size: 16px;
+        font-weight: 300;
+        padding-bottom: 15px;
+        text-transform: uppercase;
+        padding-top: 40px;
+        .line {
+        border-bottom: 2px solid $tertiary;
+        padding-bottom: 3px;
+        }
+    }
+    &__dishes{
+        padding-left: 5px;
+        font-size: 18px;
+        font-weight: 500;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    &__dishes_infos{
+        padding-left: 5px;
+        font-size: 15px;
+        font-weight: 300;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    &__price{
+        font-size: 15px;
+        font-weight: 700;
+        padding-top: 10px;
+        position: absolute;
+        right: 20px;
+        top: 28px;
+    }
+    }
+    .fa-sharp.fa-solid.fa-circle-check {
+        position: absolute;
+        right: 0;
+        width: 62px;
+        height: 100%;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        background-color: transparent;
+    &::before {
+        position: absolute;
+        right: -62px;
+        top: -1;
+        width: 60px;
+        height: 71px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        background-color: $tertiary;
+        color: $white;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        transition: all 500ms;
+        @include flex_xy_alignment;
+    }
+    &:hover::before {
+        right: 0;
+
+        + .food_list__price::before {
+        right: 80px;
+        }
+    }
+    }

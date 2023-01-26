@@ -35,6 +35,22 @@ p {
     z-index: -3;
   }
 }
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @-webkit-keyframes spin {
   to {
     transform: rotate(360deg);
@@ -43,6 +59,22 @@ p {
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes appear {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
+@keyframes appear {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(0);
   }
 }
 .reservation__button {
@@ -61,6 +93,14 @@ p {
 .reservation__button:hover {
   background-image: linear-gradient(#a16be0, #ff93e1);
   box-shadow: 0.9px 0.9px 13.3px rgba(0, 0, 0, 0.52), 7px 7px 106px rgba(0, 0, 0, 0.26);
+}
+
+.reservation_page_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .steps__button, .steps__button2 {
@@ -90,6 +130,27 @@ p {
 .steps__button2:hover {
   background-color: #f8f2ff;
   box-shadow: 0.9px 0.9px 13.3px rgba(0, 0, 0, 0.52), 7px 7px 106px rgba(0, 0, 0, 0.26);
+}
+
+.food_list__menu_dishes {
+  position: relative;
+  background-color: white;
+  padding: 0;
+  height: 70px;
+  width: 100%;
+  border: 0;
+  border-radius: 15px;
+  box-shadow: 0.9px 4.6px 25px rgba(0, 0, 0, 0.17), 7px 37px 200px rgba(0, 0, 0, 0.085);
+  margin-top: 12px;
+  overflow: hidden;
+  -webkit-animation: fadein 3s, appear 5s;
+          animation: fadein 3s, appear 5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.food_list__menu_dishes:hover + .fa-sharp.fa-solid.fa-circle-check:hover::before {
+  transition: all 500ms;
 }
 
 .loader {
@@ -381,4 +442,159 @@ footer .fa-solid.fa-handshake-angle {
   .restaurants a {
     right: 10px;
   }
+}
+
+@media (min-width: 768px) {
+  main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+main img {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  main img {
+    width: 100vw;
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+.container {
+  background-color: #F7F7F7;
+}
+
+.top_title {
+  position: relative;
+  top: -60px;
+  border: 1px solid #F7F7F7;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: #F7F7F7;
+}
+@media (min-width: 768px) {
+  .top_title {
+    width: 70vw;
+  }
+}
+
+.restaurant_name {
+  font-family: "Shrikhand";
+  padding: 32px 17px 1px 17px;
+}
+
+.plain_heart, .empty_heart {
+  font-size: 21px;
+  position: absolute;
+  background-size: contain;
+  right: 45px;
+  padding-top: 5px;
+  overflow: hidden;
+}
+
+.alignement {
+  display: flex;
+  justify-content: center;
+}
+
+i {
+  width: 23px;
+  height: 23px;
+}
+
+.empty_heart {
+  color: black;
+}
+
+.heart_plain {
+  cursor: pointer;
+  opacity: 0;
+  color: transparent;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: opacity 1s ease-out 200ms;
+}
+.heart_plain:hover {
+  opacity: 1;
+}
+
+.food_list {
+  background: #F7F7F7;
+  position: relative;
+  top: -60px;
+  font-family: "Roboto", sans-serif;
+  padding: 0 15px;
+}
+.food_list__title {
+  font-size: 16px;
+  font-weight: 300;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  padding-top: 40px;
+}
+.food_list__title .line {
+  border-bottom: 2px solid #99e2d0;
+  padding-bottom: 3px;
+}
+.food_list__dishes {
+  padding-left: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.food_list__dishes_infos {
+  padding-left: 5px;
+  font-size: 15px;
+  font-weight: 300;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.food_list__price {
+  font-size: 15px;
+  font-weight: 700;
+  padding-top: 10px;
+  position: absolute;
+  right: 20px;
+  top: 28px;
+}
+
+.fa-sharp.fa-solid.fa-circle-check {
+  position: absolute;
+  right: 0;
+  width: 62px;
+  height: 100%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: transparent;
+}
+.fa-sharp.fa-solid.fa-circle-check::before {
+  position: absolute;
+  right: -62px;
+  top: -1;
+  width: 60px;
+  height: 71px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #99e2d0;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: all 500ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fa-sharp.fa-solid.fa-circle-check:hover::before {
+  right: 0;
+}
+.fa-sharp.fa-solid.fa-circle-check:hover::before + .food_list__price::before {
+  right: 80px;
 }

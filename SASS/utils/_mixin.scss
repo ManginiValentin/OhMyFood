@@ -15,3 +15,9 @@
     display: flex;
     flex-direction: row;
 }
+
+@mixin flex_button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
