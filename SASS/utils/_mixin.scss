@@ -21,3 +21,11 @@
     flex-direction: column;
     justify-content: center;
 }
+
+@mixin ellipsis {
+    width: 210px;
+    text-align: start;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

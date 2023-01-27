@@ -5,8 +5,8 @@ main{
     flex-wrap: wrap;
     }
 
-    img{
-        width: 100%;
+img{
+    width: 100%;
         @media (min-width: 768px){
             width: 100vw;
             height: 400px;
@@ -25,20 +25,22 @@ main{
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     background-color: $light_color;
-    @media (min-width: 768px){
-        width: 70vw;
-    }
+
+        @media (min-width: 768px){
+            width: 70vw;
+        }
 }
 .restaurant_name{
     font-family: $logo-font;
     padding: 32px 17px 1px 17px;
 }
 .plain_heart{
-    font-size: 21px;
+    font-size: 20px;
     position: absolute;
     background-size: contain;
     right: 45px;
     padding-top: 5px;
+    padding-right: 1px;
     overflow: hidden;
 }
 .empty_heart{
@@ -58,11 +60,11 @@ i {
 .heart_plain{
     cursor: pointer;
     opacity: 0;
-    color:transparent;
+    color: transparent;
     background-image: linear-gradient($primary,$gradient);
     background-clip: text;
     -webkit-background-clip: text;
-    transition: opacity 1s ease-out 200ms;
+    transition: opacity 200ms ease-out 200ms;
 
     &:hover {
         opacity: 1;
@@ -90,18 +92,14 @@ i {
         padding-left: 5px;
         font-size: 18px;
         font-weight: 500;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
     }
     &__dishes_infos{
         padding-left: 5px;
         font-size: 15px;
         font-weight: 300;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
+            @media (min-width: 768px){   
+                @include ellipsis;}
+            }
     &__price{
         font-size: 15px;
         font-weight: 700;
@@ -110,15 +108,16 @@ i {
         right: 20px;
         top: 28px;
     }
-    }
-    .fa-sharp.fa-solid.fa-circle-check {
-        position: absolute;
-        right: 0;
-        width: 62px;
-        height: 100%;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        background-color: transparent;
+}
+.fa-sharp.fa-solid.fa-circle-check {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: transparent;
+
     &::before {
         position: absolute;
         right: -62px;
@@ -137,9 +136,5 @@ i {
     }
     &:hover::before {
         right: 0;
-
-        + .food_list__price::before {
-        right: 80px;
-        }
     }
-    }
+}
