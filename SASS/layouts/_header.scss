@@ -1,11 +1,29 @@
 header{
     width: auto;
-    height: 43px;
+    height: 79px;
     margin: 10px 0 10px;
     @include flex_xy_alignment;
+    flex-direction: column;
 
     img{
     width: 162px;
     height: 44px;
+    }
+
+    p {
+        padding-top: 2px;
+    }
+}
+.location_bar{
+    @include flex_xy_alignment;
+    height: 50px;
+    width: auto;
+    color: $black;
+    background-color: $dark_color;
+        width: 100vw;
+
+    .fa-solid.fa-location-dot{
+        height: 16px;
+        padding-right: 17px;
     }
 }

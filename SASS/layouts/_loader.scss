@@ -12,6 +12,8 @@
     animation: disappear 1s 3s forwards;
 
     i {
+        height: auto;
+        width: auto;
         animation: spin 3s infinite linear;
     }  
 }

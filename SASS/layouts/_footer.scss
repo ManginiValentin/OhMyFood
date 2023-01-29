@@ -3,15 +3,13 @@ footer{
     padding-top: 25px;
     padding-bottom: 35px;
     @media (min-width: 768px){
-    @include flex_xy_alignment;
+    display: flex;
+    justify-content: flex-start;
     flex-direction: row-reverse;
+    align-items: center;
     padding-right: 90px;
-    padding-left: 90px;
-    }
-    @media (min-width: 992px){
-        padding-right: 150px;
-        padding-left: 150px;
-    }
+    padding-left: 50px;
+}
 
         .title{
             color: $white;
@@ -20,15 +18,16 @@ footer{
             font-size: 18px;
             @media (min-width: 768px){
                 @include flex_xy_alignment;
+                padding-bottom: 7px;
                 }
         }
         ul{
             list-style-type: none;
             padding-left: 25px;
             @media (min-width: 768px){
-                @include flex_xy_alignment;
                 display: flex;
-                flex-direction: row-reverse;
+                justify-content: center;
+                align-items: flex-start;
                 }
         }
         li{
