@@ -366,6 +366,11 @@ footer .fa-solid.fa-handshake-angle {
   padding-bottom: 25px;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .steps {
   padding: 45px 20px;
 }
@@ -435,33 +440,17 @@ footer .fa-solid.fa-handshake-angle {
   display: flex;
   flex-direction: column;
   height: auto;
-  gap: 50px;
+  gap: 20px;
 }
 @media (min-width: 768px) {
   .restaurants__cards_list {
-    padding-left: 150px;
+    padding-left: 130px;
     padding-top: 20px;
     display: flex;
     flex-direction: row;
     overflow-x: auto;
-    gap: 20px;
     height: 300px;
     width: auto;
-  }
-}
-.restaurants .new {
-  position: absolute;
-  right: 20px;
-  margin: 10px;
-  padding: 9px 7px;
-  color: #008766;
-  border: 1px solid #99e2d0;
-  border-radius: 2px;
-  background-color: #99e2d0;
-}
-@media (min-width: 768px) {
-  .restaurants .new {
-    right: 10px;
   }
 }
 .restaurants .card {
@@ -477,6 +466,16 @@ footer .fa-solid.fa-handshake-angle {
     width: 335px;
     flex: 0 0 auto;
   }
+}
+.restaurants .new {
+  position: absolute;
+  right: 1px;
+  margin: 10px;
+  padding: 9px 7px;
+  color: #008766;
+  border: 1px solid #99e2d0;
+  border-radius: 2px;
+  background-color: #99e2d0;
 }
 .restaurants img {
   width: 100%;
@@ -496,7 +495,7 @@ footer .fa-solid.fa-handshake-angle {
   background-image: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
-  transition: opacity 1s ease-out 200ms;
+  transition: opacity 1s ease-out 100ms;
 }
 .restaurants .heart_plain:hover {
   opacity: 1;
@@ -511,19 +510,20 @@ footer .fa-solid.fa-handshake-angle {
   }
 }
 .restaurants p {
+  text-decoration: none;
   padding-left: 13px;
 }
-.restaurants a {
+.restaurants .heart {
   font-size: 21px;
   position: absolute;
   background-size: contain;
-  right: 45px;
-  padding-top: 23px;
+  right: 20px;
+  top: 200px;
   overflow: hidden;
 }
 @media (min-width: 768px) {
-  .restaurants a {
-    right: 10px;
+  .restaurants .heart {
+    right: 15px;
   }
 }
 
@@ -535,6 +535,7 @@ footer .fa-solid.fa-handshake-angle {
   .flex {
     display: flex;
     justify-content: center;
+    background-color: white;
   }
 }
 
@@ -556,6 +557,12 @@ footer .fa-solid.fa-handshake-angle {
 .alignement {
   display: flex;
   justify-content: center;
+}
+@media (min-width: 768px) {
+  .alignement {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 i {
@@ -615,26 +622,36 @@ i {
   padding-left: 5px;
   font-size: 18px;
   font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+@media (min-width: 768px) {
+  .food_list__dishes {
+    width: 240px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 .food_list__dishes_infos {
   padding-left: 5px;
   font-size: 15px;
   font-weight: 300;
   text-align: start;
-}
-@media (min-width: 768px) {
-  .food_list__dishes_infos {
-    width: 210px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+  width: 240px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .food_list__price {
   padding-bottom: 15px;
   font-size: 15px;
   font-weight: 700;
   padding-right: 5px;
+}
+
+.food_and_infos {
+  display: flex;
+  flex-direction: column;
 }
 
 .price_and_check {

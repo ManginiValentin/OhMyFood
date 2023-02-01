@@ -1,17 +1,21 @@
 .container {
     background-color: $light_color;
 }
+
 .flex {
     @media (min-width: 768px){ 
     display: flex;
     justify-content: center;
+    background-color: $white;
     }
 }
-.restaurant_name{
+
+.restaurant_name {
     font-family: $logo-font;
     padding: 32px 0 1px 0;
 }
-.plain_heart2{
+
+.plain_heart2 {
     font-size: 20px;
     position: absolute;
     background-size: contain;
@@ -20,21 +24,30 @@
     padding-right: 1px;
     overflow: hidden;
 }
-.empty_heart2{
+
+.empty_heart2 {
     @extend .plain_heart2;
 }
-.alignement{
+
+.alignement {
     display: flex;
     justify-content: center;
+    @media (min-width: 768px){ 
+        display: flex;
+        justify-content: center;
+    }
 }
+
 i {
     width:23px;
     height: 23px;
 }
-.empty_heart2{
+
+.empty_heart2 {
     color: $black;
 }
-.heart_plain2{
+
+.heart_plain2 {
     cursor: pointer;
     opacity: 0;
     color: transparent;
@@ -47,7 +60,8 @@ i {
         opacity: 1;
     }
 }
-.food_list{
+
+.food_list {
     background: $light_color;
     font-family: $font-family;
     padding: 0 17px;
@@ -59,42 +73,56 @@ i {
         width: 60%;
     }
 
-    &__menu_dishes{
+    &__menu_dishes {
         display: flex;
         flex-wrap: wrap;
         align-content: space-between;
     }
-    &__title{
+
+    &__title {
         font-size: 16px;
         font-weight: 300;
         padding-bottom: 15px;
         text-transform: uppercase;
         padding-top: 40px;
+
         .line {
         border-bottom: 2px solid $tertiary;
         padding-bottom: 3px;
         }
     }
-    &__dishes{
+
+    &__dishes {
         text-align: start;
         padding-left: 5px;
         font-size: 18px;
         font-weight: 500;
+        font-family: $font-family;
+
+        @media (min-width: 768px){ 
+            @include ellipsis;
+        }
     }
-    &__dishes_infos{
+
+    &__dishes_infos {
         padding-left: 5px;
         font-size: 15px;
         font-weight: 300;
         text-align: start;
-            @media (min-width: 768px){   
-                @include ellipsis;}
-            }
-    &__price{
+        @include ellipsis;
+    }
+
+    &__price {
         padding-bottom: 15px;
         font-size: 15px;
         font-weight: 700;
         padding-right: 5px;
     }
+}
+
+.food_and_infos {
+    display: flex;
+    flex-direction: column;
 }
 .price_and_check {
     padding-right: 0;
@@ -120,7 +148,7 @@ i {
     cursor: pointer;
 
     &:hover {
-        
+
         .check {
             width: 60px;
             background-color: $tertiary;

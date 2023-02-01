@@ -1,5 +1,4 @@
-
-.reservation{
+.reservation {
     @include flex_column;
     @include flex_xy_alignment;
     padding: 39px 20px 57px;
@@ -14,17 +13,21 @@
             padding-bottom: 25px;
         }
 }
-.steps{
+a {
+    text-decoration: none;
+    color: $black;
+}
+.steps {
     padding: 45px 20px;
 
-    &__title{
+    &__title {
         padding-bottom: 25px;
         @media (min-width: 768px){
             padding-left: 150px;
         }
     }
 
-    .button_list{
+    .button_list {
         @include flex_xy_alignment;
         @include flex_column;
         height: auto;
@@ -37,7 +40,7 @@
         }
     }
 
-    .number{
+    .number {
         @include flex_xy_alignment;
         position: absolute;
         left: -10px;
@@ -48,18 +51,20 @@
         background: $primary;
         border-radius: 100%;
     }
+
     i {
         padding-right: 27px;
         font-size: 20px;
     }
 }
+
 .restaurants {
     padding: 54px 20px;
     background-color: $light_color;
+
     @media (min-width: 768px){
         width: 100%;
         padding: 54px 0 0 0;
-
     }
 
         &__title{
@@ -73,32 +78,18 @@
         &__cards_list{
             @include flex_column;
             height: auto;
-            gap: 50px;
+            gap: 20px;
             @media (min-width: 768px){
-                padding-left: 150px;
+                padding-left: 130px;
                 padding-top: 20px;
                 @include flex_direction;
                 overflow-x: auto;
-                gap: 20px;
                 height: 300px;
                 width: auto;
+            }
+        }
 
-            }
-        }
-        .new{
-            position: absolute;
-            right: 20px;
-            margin:10px;
-            padding: 9px 7px;
-            color: $secondary;
-            border: 1px solid $tertiary;
-            border-radius: 2px;
-            background-color: $tertiary;
-            @media (min-width: 768px){
-                right: 10px;
-            }
-        }
-        .card{
+        .card {
             height: 250px;
             width: 100%;
             background-color: $white;
@@ -110,48 +101,66 @@
                 flex: 0 0 auto;
             }
         }
-        img{
+
+        .new {
+            position: absolute;
+            right: 1px;
+            margin: 10px;
+            padding: 9px 7px;
+            color: $secondary;
+            border: 1px solid $tertiary;
+            border-radius: 2px;
+            background-color: $tertiary;
+        }
+
+        img {
             width: 100%;
             height: 170px;
             object-fit: cover;
             border-radius: 25px 25px 0 0;
         }
+
         i {
-            width:23px;
+            width: 23px;
             height: 23px;
         }
-        .heart_plain{
+
+        .heart_plain {
             cursor: pointer;
             opacity: 0;
             color:transparent;
             background-image: linear-gradient($primary,$gradient);
             background-clip: text;
             -webkit-background-clip: text;
-            transition: opacity 1s ease-out 200ms;
+            transition: opacity 1s ease-out 100ms;
 
             &:hover {
                 opacity: 1;
             }
         }
-        h3{
+
+        h3 {
             padding: 15px 0 5px 13px;
             @media (min-width: 768px){
             padding-top: 7px;
             padding-bottom: 7px;
             }
         }
-        p{
+
+        p {
+            text-decoration: none;
             padding-left: 13px;
         }
-        a{
+
+        .heart {
             font-size: 21px;
             position: absolute;
             background-size: contain;
-            right: 45px;
-            padding-top: 23px;
+            right: 20px;
+            top: 200px;
             overflow: hidden;
             @media (min-width: 768px){
-                right: 10px;
+                right: 15px;
             }
         }
 }
