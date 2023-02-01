@@ -12,16 +12,33 @@
         opacity: 1;
     }
 }
+@keyframes fadein2 {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadein3 {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 @keyframes spin {
     to{
     transform: rotate(360deg);
-    }
-}
-@keyframes appear {
-    0% {
-        transform: translateY(-50%);
-    }
-    50% {
-        transform: translateY(0)
     }
 }
