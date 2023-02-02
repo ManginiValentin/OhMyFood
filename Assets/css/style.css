@@ -444,7 +444,7 @@ a {
 }
 @media (min-width: 768px) {
   .restaurants__cards_list {
-    padding-left: 130px;
+    padding-left: 150px;
     padding-top: 20px;
     display: flex;
     flex-direction: row;

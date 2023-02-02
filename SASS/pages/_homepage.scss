@@ -80,7 +80,7 @@ a {
             height: auto;
             gap: 20px;
             @media (min-width: 768px){
-                padding-left: 130px;
+                padding-left: 150px;
                 padding-top: 20px;
                 @include flex_direction;
                 overflow-x: auto;
