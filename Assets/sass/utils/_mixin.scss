@@ -1,30 +1,30 @@
-@mixin flex_xy_alignment{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@mixin flex_xy_alignment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-@mixin flex_column{
-    display: flex;
-    flex-direction: column;
+@mixin flex_column {
+  display: flex;
+  flex-direction: column;
 }
-@mixin flex_wrap{
-    display: flex;
-    flex-wrap: wrap;
+@mixin flex_wrap {
+  display: flex;
+  flex-wrap: wrap;
 }
-@mixin flex_direction{
-    display: flex;
-    flex-direction: row;
+@mixin flex_direction {
+  display: flex;
+  flex-direction: row;
 }
 
-@mixin flex_button{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+@mixin flex_button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @mixin ellipsis {
-    width: 240px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

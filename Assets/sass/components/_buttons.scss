@@ -1,64 +1,102 @@
 .reservation__button {
-    font-weight: 500;
-    size: 16px;
-    width: 218px;
-    height: 50px;
-    border-radius: 25px;
-    color: $white;
-    background-image: linear-gradient($primary,$gradient);
-    border: none;
-    cursor: pointer;
-    box-shadow: 0.9px 4.6px 25px rgba(0, 0, 0, 0.17), 7px 37px 200px rgba(0, 0, 0, 0.085);
-    transition: all 1s ease-out;
-    &:hover {
-        background-image: linear-gradient(lighten($primary, 5), lighten($gradient, 5));
-        box-shadow: 0.9px 0.9px 13.3px rgba(0, 0, 0, 0.52),7px 7px 106px rgba(0, 0, 0, 0.26);
-    }
+  font-weight: 500;
+  size: 16px;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  color: $white;
+  background-image: linear-gradient($primary, $gradient);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0.9px 4.6px 25px rgba(0, 0, 0, 0.17), 7px 37px 200px rgba(0, 0, 0, 0.085);
+  transition: all 1s ease-out;
+  &:hover {
+    background-image: linear-gradient(lighten($primary, 5), lighten($gradient, 5));
+    box-shadow: 0.9px 0.9px 13.3px rgba(0, 0, 0, 0.52), 7px 7px 106px rgba(0, 0, 0, 0.26);
+  }
 }
-.reservation_page_button{
-    @include flex_xy_alignment;
-    margin-top: 40px;
-    margin-bottom: 40px;
+.reservation_page_button {
+  @include flex_xy_alignment;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .steps__button {
-    @include flex_xy_alignment;
-    position: relative;
-    height: 73px;
-    width: 100%;
-    padding: 20px;
-    border-radius: 25px;
-    background-color: $light_color;
-    box-shadow: 0.9px 4.6px 25px rgba(0, 0, 0, 0.17), 7px 37px 200px rgba(0, 0, 0, 0.085);
-    border: none;
-    cursor: pointer;
-    transition: all 1s ease-out;
-    @media (min-width: 768px){
-        width: 300px;
-    }
-    &:hover{
+  @include flex_xy_alignment;
+  position: relative;
+  height: 73px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 25px;
+  background-color: $light_color;
+  box-shadow: 0.9px 4.6px 25px rgba(0, 0, 0, 0.17), 7px 37px 200px rgba(0, 0, 0, 0.085);
+  border: none;
+  cursor: pointer;
+  transition: all 1s ease-out;
+  @media (min-width: 768px) {
+    width: 300px;
+  }
+  &:hover {
     background-color: lighten($light_color, 1);
-    box-shadow:0.9px 0.9px 13.3px rgba(0, 0, 0, 0.52),7px 7px 106px rgba(0, 0, 0, 0.26);
-    }
+    box-shadow: 0.9px 0.9px 13.3px rgba(0, 0, 0, 0.52), 7px 7px 106px rgba(0, 0, 0, 0.26);
+  }
 }
 .steps__button2 {
-    @extend .steps__button;
-    background-color: $hover;
-    transition: all 1s ease-out;
-    &:hover{
-        background-color: lighten($hover, 1);
-        box-shadow:0.9px 0.9px 13.3px rgba(0, 0, 0, 0.52),7px 7px 106px rgba(0, 0, 0, 0.26);
-        }
-    }
+  @extend .steps__button;
+  background-color: $hover;
+  transition: all 1s ease-out;
+  &:hover {
+    background-color: lighten($hover, 1);
+    box-shadow: 0.9px 0.9px 13.3px rgba(0, 0, 0, 0.52), 7px 7px 106px rgba(0, 0, 0, 0.26);
+  }
+}
 .food_list__menu_dishes {
-    position: relative;
-    background-color: $white;
-    padding: 0;
-    height: 70px;
-    width: 100%;
-    border: 0;
-    border-radius: 15px;
-    box-shadow: 0.9px 4.6px 25px rgba(0, 0, 0, 0.17), 7px 37px 200px rgba(0, 0, 0, 0.085);
-    margin-top: 12px;
-    overflow: hidden;
-    @include flex_button;
+  position: relative;
+  background-color: $white;
+  padding: 0;
+  height: 70px;
+  width: 100%;
+  border: 0;
+  border-radius: 15px;
+  box-shadow: 0.9px 4.6px 25px rgba(0, 0, 0, 0.17), 7px 37px 200px rgba(0, 0, 0, 0.085);
+  margin-top: 12px;
+  overflow: hidden;
+  @include flex_button;
+}
+
+/** heart **/
+.plain_heart {
+  font-size: 20px;
+  position: absolute;
+  background-size: contain;
+  right: 25px;
+  padding-top: 5px;
+  padding-right: 1px;
+  overflow: hidden;
+}
+
+.empty_heart {
+  @extend .plain_heart;
+}
+
+i {
+  width: 23px;
+  height: 23px;
+}
+
+.empty_heart {
+  color: $black;
+}
+
+.heart_plain {
+  cursor: pointer;
+  opacity: 0;
+  color: transparent;
+  background-image: linear-gradient($primary, $gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: opacity 200ms ease-out 200ms;
+
+  &:hover {
+    opacity: 1;
+  }
 }

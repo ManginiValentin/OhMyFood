@@ -1,167 +1,132 @@
 .container {
-    background-color: $light_color;
+  background-color: $light_color;
 }
 
 .flex {
-    @media (min-width: 768px){ 
+  @media (min-width: 768px) {
     display: flex;
     justify-content: center;
     background-color: $white;
-    }
+  }
 }
 
 .restaurant_name {
-    font-family: $logo-font;
-    padding: 32px 0 1px 0;
-}
-
-.plain_heart2 {
-    font-size: 20px;
-    position: absolute;
-    background-size: contain;
-    right: 25px;
-    padding-top: 5px;
-    padding-right: 1px;
-    overflow: hidden;
-}
-
-.empty_heart2 {
-    @extend .plain_heart2;
+  font-family: $logo-font;
+  padding: 32px 0 1px 0;
 }
 
 .alignement {
+  display: flex;
+  justify-content: center;
+  @media (min-width: 768px) {
     display: flex;
     justify-content: center;
-    @media (min-width: 768px){ 
-        display: flex;
-        justify-content: center;
-    }
-}
-
-i {
-    width:23px;
-    height: 23px;
-}
-
-.empty_heart2 {
-    color: $black;
-}
-
-.heart_plain2 {
-    cursor: pointer;
-    opacity: 0;
-    color: transparent;
-    background-image: linear-gradient($primary,$gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    transition: opacity 200ms ease-out 200ms;
-
-    &:hover {
-        opacity: 1;
-    }
+  }
 }
 
 .food_list {
-    background: $light_color;
-    font-family: $font-family;
-    padding: 0 17px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    position: relative;
-    z-index: 1;
-    @media (min-width: 768px){   
-        width: 60%;
-    }
+  background: $light_color;
+  font-family: $font-family;
+  padding: 0 17px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  position: relative;
+  z-index: 1;
+  @media (min-width: 768px) {
+    width: 60%;
+  }
 
-    &__menu_dishes {
-        display: flex;
-        flex-wrap: wrap;
-        align-content: space-between;
-    }
-
-    &__title {
-        font-size: 16px;
-        font-weight: 300;
-        padding-bottom: 15px;
-        text-transform: uppercase;
-        padding-top: 40px;
-
-        .line {
-        border-bottom: 2px solid $tertiary;
-        padding-bottom: 3px;
-        }
-    }
-
-    &__dishes {
-        text-align: start;
-        padding-left: 5px;
-        font-size: 18px;
-        font-weight: 500;
-        font-family: $font-family;
-
-        @media (min-width: 768px){ 
-            @include ellipsis;
-        }
-    }
-
-    &__dishes_infos {
-        padding-left: 5px;
-        font-size: 15px;
-        font-weight: 300;
-        text-align: start;
-        @include ellipsis;
-    }
-
-    &__price {
-        padding-bottom: 15px;
-        font-size: 15px;
-        font-weight: 700;
-        padding-right: 5px;
-    }
-}
-
-.food_and_infos {
+  &__menu_dishes {
     display: flex;
-    flex-direction: column;
-}
-.price_and_check {
-    padding-right: 0;
-    height: 71px;
-    display: flex;
-    align-items: flex-end;
-}
-
-.check {
-    color: white;
-    width: 16px;
-    height: 70px;
-    @include flex_xy_alignment;
-    transition: all 200ms;
-}
-
-.fa-sharp.fa-solid.fa-circle-check {
-    font-size: 16px;
-    padding-top: 8px;
-}
-
-.food_list__menu_dishes {
+    flex-wrap: wrap;
+    align-content: space-between;
     cursor: pointer;
 
     &:hover {
-
-        .check {
-            width: 60px;
-            background-color: $tertiary;
-        }
+      .check {
+        width: 60px;
+        background-color: $tertiary;
+      }
     }
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 300;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    padding-top: 40px;
+
+    .line {
+      border-bottom: 2px solid $tertiary;
+      padding-bottom: 3px;
+    }
+  }
+
+  &__dishes {
+    text-align: start;
+    padding-left: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: $font-family;
+    @include ellipsis;
+
+    @media (min-width: 768px) {
+      overflow: initial;
+    }
+  }
+
+  &__dishes_infos {
+    padding-left: 5px;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: start;
+    @include ellipsis;
+  }
+
+  &__price {
+    padding-bottom: 15px;
+    font-size: 15px;
+    font-weight: 700;
+    padding-right: 5px;
+  }
 }
 
-.first_dishes {
-    animation: fadein 3s;
+.food_and_infos {
+  display: flex;
+  flex-direction: column;
 }
-.second_dishes {
-    animation: fadein2 3s;
+.price_and_check {
+  padding-right: 0;
+  height: 71px;
+  display: flex;
+  align-items: flex-end;
 }
+
+.check {
+  color: white;
+  width: 16px;
+  height: 70px;
+  @include flex_xy_alignment;
+  transition: all 200ms;
+}
+
+.fa-sharp.fa-solid.fa-circle-check {
+  font-size: 16px;
+  padding-top: 8px;
+}
+
+.first_dishes,
+.second_dishes,
 .third_dishes {
-    animation: fadein3 3s;
+  animation: fadein 3s;
+  animation-fill-mode: backwards;
+}
+
+.second_dishes {
+  animation-delay: 0.4s;
+}
+
+.third_dishes {
+  animation-delay: 0.7s;
 }
